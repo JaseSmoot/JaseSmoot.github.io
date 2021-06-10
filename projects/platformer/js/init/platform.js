@@ -21,7 +21,7 @@
      *      scaleX: OPTIONAL The scale factor on the x-axis, this value will 
      *              stretch the platform in width.
      *      scaleY: OPTIONAL The scale factor on the y-axis, this value will 
-     *              stretch the platform in height.
+     *              stretch the platform in -height.
      */ 
     function init(game) {
         let createPlatform = platform.create;
@@ -37,9 +37,10 @@
         createPlatform(0, game.world.height - 32, 3, 2);    // DO NOT DELETE
 
         // example:
-        createPlatform(400, 250);
-        createPlatform(170, 460, 0.5);
-        
+        createPlatform(100, 40);
+        createPlatform(200,600, 0.4);
+        createPlatform(500,500, 0.4);
+         createPlatform(200,400,0.5);
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
         ////////////////////////////////////////////////////////////////////////
     }
