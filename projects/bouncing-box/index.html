@@ -6,7 +6,7 @@
 	<script src="jquery.min.js"></script>
 	<style>
 		.box {
-			width: 70px;
+			width: 100px;
 			height: 70px;
 			background-color: teal;
 			font-size: 300%;
@@ -14,7 +14,7 @@
 			display: block;
 			position: absolute;
 			top: 100px;
-			left: 0px;  /* <--- Change me! */
+			left: 500px;  /* <--- Change me! */
 		}
 		.board{
 			height: 100vh;
@@ -61,7 +61,8 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
+			 var positionX = 0 ;
+			 var points = 0 ;
 
 			
 			/* 
@@ -70,8 +71,8 @@
 			turn it around! 
 			*/
 			function update() {
-				
-
+			  positionX= positionX + 10
+				moveBoxTo(positionX);			
 			};
 
 			/* 
@@ -80,10 +81,13 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
+				positionX = 0;
+				points = points + 1
+				changeBoxText(points);
 				
 
 
-			};
+         	};
 		})();
 	</script>
 </body>
